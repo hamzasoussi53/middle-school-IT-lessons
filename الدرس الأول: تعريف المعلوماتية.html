@@ -1,1 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس الأول: تعريف المعلوماتية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        body {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+        .section {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .gradient-animate {
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+        }
+    </style>
+</head>
+<body class="font-sans">
 
+    <!-- Section 1: Welcome Title -->
+    <div class="section bg-gradient-to-br from-purple-600 via-pink-500 to-red-500 gradient-animate" x-data="{show: false}" x-init="setTimeout(() => show = true, 300)">
+        <div x-show="show" x-transition:enter="animate__animated animate__fadeInDown" class="text-center text-white">
+            <i class="fas fa-laptop-code text-9xl mb-8 animate__animated animate__bounce"></i>
+            <h1 class="text-8xl font-bold mb-6">الدرس الأول</h1>
+            <h2 class="text-7xl font-bold mb-4">تعريف المعلوماتية</h2>
+            <p class="text-4xl mt-8"><i class="fas fa-arrow-down animate__animated animate__bounce animate__infinite"></i> مرر للأسفل</p>
+        </div>
+    </div>
+
+    <!-- Section 2: Etymology -->
+    <div class="section bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-500 gradient-animate" x-data="{show: false}" x-init="setTimeout(() => show = true, 300)">
+        <div x-show="show" x-transition:enter="animate__animated animate__fadeInRight" class="text-center text-white max-w-6xl">
+            <i class="fas fa-book-open text-8xl mb-6"></i>
+            <h2 class="text-7xl font-bold mb-8">أصل الكلمة</h2>
+            <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-3xl p-10 text-5xl leading-relaxed">
+                <p class="mb-6"><i class="fas fa-language text-yellow-300 ml-3"></i> كلمة <strong>Informatique</strong> فرنسية الأصل</p>
+                <p class="mb-6"><i class="fas fa-plus text-green-300 ml-3"></i> تتكون من: <strong>Information</strong> + <strong>Automatique</strong></p>
+                <p><i class="fas fa-lightbulb text-orange-300 ml-3"></i> معناها: <strong>معالجة المعلومات آلياً</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Definition -->
+    <div class="section bg-gradient-to-br from-green-600 via-emerald-500 to-teal-500 gradient-animate" x-data="{show: false}" x-init="setTimeout(() => show = true, 300)">
+        <div x-show="show" x-transition:enter="animate__animated animate__zoomIn" class="text-center text-white max-w-6xl">
+            <i class="fas fa-desktop text-8xl mb-6"></i>
+            <h2 class="text-7xl font-bold mb-8">تعريف المعلوماتية</h2>
+            <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-3xl p-12">
+                <p class="text-5xl leading-relaxed font-semibold">
+                    <i class="fas fa-quote-right text-yellow-300 ml-3"></i>
+                    علم يهتم بمعالجة المعلومات بشكل آلي باستخدام الحاسوب
+                    <i class="fas fa-quote-left text-yellow-300 mr-3"></i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4: Components -->
+    <div class="section bg-gradient-to-br from-orange-600 via-red-500 to-pink-500 gradient-animate" x-data="{show: false}" x-init="setTimeout(() => show = true, 300)">
+        <div x-show="show" x-transition:enter="animate__animated animate__fadeInUp" class="text-center text-white max-w-7xl w-full">
+            <i class="fas fa-puzzle-piece text-8xl mb-6"></i>
+            <h2 class="text-7xl font-bold mb-10">مكونات الحاسوب</h2>
+            <div class="grid grid-cols-2 gap-10">
+                <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-3xl p-10 transform hover:scale-105 transition">
+                    <i class="fas fa-microchip text-9xl mb-6 text-yellow-300"></i>
+                    <h3 class="text-6xl font-bold mb-6">المكونات المادية</h3>
+                    <p class="text-5xl">Hardware</p>
+                    <p class="text-4xl mt-4">الأجزاء الملموسة</p>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-3xl p-10 transform hover:scale-105 transition">
+                    <i class="fas fa-code text-9xl mb-6 text-green-300"></i>
+                    <h3 class="text-6xl font-bold mb-6">البرمجيات</h3>
+                    <p class="text-5xl">Software</p>
+                    <p class="text-4xl mt-4">البرامج والتطبيقات</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 5: Types of Software -->
+    <div class="section bg-gradient-to-br from-indigo-600 via-purple-500 to-pink-500 gradient-animate" x-data="{show: false}" x-init="setTimeout(() => show = true, 300)">
+        <div x-show="show" x-transition:enter="animate__animated animate__fadeInLeft" class="text-center text-white max-w-7xl w-full">
+            <i class="fas fa-layer-group text-8xl mb-6"></i>
+            <h2 class="text-7xl font-bold mb-10">أنواع البرمجيات</h2>
+            <div class="grid grid-cols-1 gap-8">
+                <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-3xl p-8">
+                    <i class="fas fa-cogs text-7xl mb-4 text-blue-300"></i>
+                    <h3 class="text-6xl font-bold mb-4">برمجيات النظام</h3>
+                    <p class="text-4xl">مثل: Windows, Linux, macOS</p>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-3xl p-8">
+                    <i class="fas fa-apps text-7xl mb-4 text-green-300"></i>
+                    <h3 class="text-6xl font-bold mb-4">برمجيات التطبيقات</h3>
+                    <p class="text-4xl">مثل: Word, Excel, Chrome, Photoshop</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 6: Applications Table -->
+    <div class="section bg-gradient-to-br from-yellow-600 via-orange-500 to-red-500 gradient-animate" x-data="{show: false}" x-init="setTimeout(() => show = true, 300)">
+        <div x-show="show" x-transition:enter="animate__animated animate__flipInX" class="text-center text-white max-w-7xl w-full">
+            <i class="fas fa-tasks text-8xl mb-6"></i>
+            <h2 class="text-7xl font-bold mb-10">التطبيقات العملية</h2>
+            <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-3xl p-10">
+                <table class="w-full text-4xl">
+                    <thead>
+                        <tr class="border-b-4 border-white">
+                            <th class="p-6 text-5xl font-bold">المجال</th>
+                            <th class="p-6 text-5xl font-bold">الاستخدام</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-right">
+                        <tr class="border-b-2 border-white border-opacity-50">
+                            <td class="p-6"><i class="fas fa-graduation-cap ml-3 text-blue-300"></i> التعليم</td>
+                            <td class="p-6">التعلم الإلكتروني والمنصات التعليمية</td>
+                        </tr>
+                        <tr class="border-b-2 border-white border-opacity-50">
+                            <td class="p-6"><i class="fas fa-hospital ml-3 text-red-300"></i> الطب</td>
+                            <td class="p-6">الأشعة والتشخيص الطبي</td>
+                        </tr>
+                        <tr class="border-b-2 border-white border-opacity-50">
+                            <td class="p-6"><i class="fas fa-shopping-cart ml-3 text-green-300"></i> التجارة</td>
+                            <td class="p-6">التجارة الإلكترونية والدفع الرقمي</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6"><i class="fas fa-gamepad ml-3 text-purple-300"></i> الترفيه</td>
+                            <td class="p-6">الألعاب ومنصات البث</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 7: Conclusion -->
+    <div class="section bg-gradient-to-br from-teal-600 via-green-500 to-blue-500 gradient-animate" x-data="{show: false}" x-init="setTimeout(() => show = true, 300)">
+        <div x-show="show" x-transition:enter="animate__animated animate__fadeIn" class="text-center text-white max-w-6xl">
+            <i class="fas fa-check-circle text-9xl mb-8 text-yellow-300 animate__animated animate__heartBeat animate__infinite"></i>
+            <h2 class="text-7xl font-bold mb-10">الخلاصة</h2>
+            <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-3xl p-12">
+                <p class="text-5xl leading-relaxed mb-8">
+                    <i class="fas fa-star text-yellow-300 ml-3"></i>
+                    المعلوماتية علم أساسي في عصرنا الحديث
+                </p>
+                <p class="text-5xl leading-relaxed mb-8">
+                    <i class="fas fa-star text-yellow-300 ml-3"></i>
+                    تستخدم في جميع مجالات الحياة
+                </p>
+                <p class="text-5xl leading-relaxed">
+                    <i class="fas fa-star text-yellow-300 ml-3"></i>
+                    تساعدنا على معالجة المعلومات بسرعة ودقة
+                </p>
+            </div>
+            <p class="text-6xl mt-12 font-bold"><i class="fas fa-heart text-red-400"></i> شكراً لحسن الإصغاء <i class="fas fa-heart text-red-400"></i></p>
+        </div>
+    </div>
+
+</body>
+</html>
