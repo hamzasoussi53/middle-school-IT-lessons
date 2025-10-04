@@ -25,6 +25,8 @@
             height: 100%;
             font-size: 20px;
             font-family: "Cairo", sans-serif;
+            /* More line spacing for projector readability */
+            line-height: 1.8;
         }
 
         /* On larger (projector) screens, scale a bit more */
@@ -51,6 +53,13 @@
         /* Nice scroll */
         .snap-container {
             scroll-behavior: smooth;
+        }
+
+        /* Ensure paragraphs and lists have comfortable spacing */
+        .snap-slide p,
+        .snap-slide li {
+            line-height: 1.8;
+            margin-bottom: 0.6rem;
         }
 
         /* Gradient helper */

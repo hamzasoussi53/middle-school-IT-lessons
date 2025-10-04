@@ -29,6 +29,8 @@
             font-weight: 500;
             font-style: normal;
             font-variation-settings: "slnt" 0;
+            /* More line spacing for projector readability */
+            line-height: 2.2;
         }
 
         /* On larger (projector) screens, scale a bit more */
@@ -55,6 +57,13 @@
         /* Nice scroll */
         .snap-container {
             scroll-behavior: smooth;
+        }
+
+        /* Ensure paragraphs and lists have comfortable spacing */
+        .snap-slide p,
+        .snap-slide li {
+            line-height: 2.2;
+            margin-bottom: 0.8rem;
         }
 
         /* Gradient helper */

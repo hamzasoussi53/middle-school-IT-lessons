@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,17 +13,58 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <!-- AlpineJS -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
   <style>
-    @page { size: A4; margin: 14mm; }
-    @media print {
-      .no-print { display: none !important; }
-      .page { box-shadow: none !important; border: none !important; }
-      .break-inside-avoid { break-inside: avoid; }
+    @page {
+      size: A4;
+      margin: 14mm;
     }
-    body { background: #f1f5f9; }
+
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+
+      .page {
+        box-shadow: none !important;
+        border: none !important;
+      }
+
+      .break-inside-avoid {
+        break-inside: avoid;
+      }
+    }
+
+    body {
+      background: #f1f5f9;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    /* Lesson styling */
+    .lesson-title {
+      color: #0ea5e9;
+      font-weight: 800;
+      text-decoration: underline;
+    }
+
+    .colored-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(245, 247, 250, 0.9));
+    }
+
+    .important {
+      color: #f59e0b;
+      font-weight: 700;
+    }
+
+    thead th {
+      background: rgba(99, 102, 241, 0.06);
+    }
   </style>
 </head>
-<body class="font-sans text-slate-800">
+
+<body class="text-slate-800">
   <div class="no-print sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="max-w-4xl mx-auto px-4 py-2 flex items-center justify-between">
       <div class="text-sm text-slate-600">ملف قابل للطباعة على ورق A4</div>
@@ -68,44 +110,56 @@
     <section class="p-6 md:p-8 space-y-6">
       <!-- Welcome / Intro -->
       <div
-        class="bg-slate-50 border border-slate-200 rounded-xl p-4 md:p-5 leading-8 animate__animated animate__fadeInUp break-inside-avoid">
-        <p>أهلاً بكم أعزائي التلاميذ في أول درس من دروس السنة الثانية متوسط في مادة الإعلام الآلي. سنتعرف في هذه الحصة على مفهوم معالج النصوص وأهميته في حياتنا الدراسية واليومية، مع التركيز على برنامج Microsoft Word كمثال رئيسي.</p>
+        class="bg-slate-50 border border-slate-200 rounded-xl p-4 md:p-5 leading-8 animate__animated animate__fadeInUp break-inside-avoid colored-card">
+        <p>أهلاً بكم أعزائي التلاميذ في أول درس من دروس السنة الثانية متوسط في مادة الإعلام الآلي. سنتعرف في هذه الحصة
+          على مفهوم <span class="important">معالج النصوص</span> وأهميته في حياتنا الدراسية واليومية، مع التركيز على
+          برنامج <span class="important">Microsoft Word</span> كمثال رئيسي.</p>
       </div>
 
       <!-- Origin of the Term -->
       <div class="space-y-3 break-inside-avoid">
-        <h2 class="flex items-center gap-2 text-lg md:text-xl font-semibold text-slate-900">
+        <h2 class="flex items-center gap-2 text-lg md:text-xl font-semibold text-slate-900 lesson-title">
           <i class="fa-solid fa-magnifying-glass text-indigo-600"></i>
           أصل مصطلح معالج النصوص
         </h2>
-        <div class="bg-white border border-slate-200 rounded-xl p-4 md:p-5">
-          <p>مصطلح معالج النصوص يُطلق على البرمجيات التي تُمكن المستخدم من إنشاء وتعديل وتنسيق النصوص الإلكترونية، مثل الرسائل، البحوث، التقارير، وغيرها. وأشهر هذه البرمجيات هو Microsoft Word.</p>
+        <div class="bg-white border border-slate-200 rounded-xl p-4 md:p-5 colored-card">
+          <p>مصطلح <span class="important">معالج النصوص</span> يُطلق على البرمجيات التي تُمكن المستخدم من إنشاء وتعديل
+            وتنسيق النصوص الإلكترونية، مثل الرسائل، البحوث، التقارير، وغيرها. وأشهر هذه البرمجيات هو <span
+              class="important">Microsoft Word</span>.</p>
         </div>
       </div>
 
       <!-- Definition -->
       <div class="space-y-3 break-inside-avoid">
-        <h2 class="flex items-center gap-2 text-lg md:text-xl font-semibold text-slate-900">
+        <h2 class="flex items-center gap-2 text-lg md:text-xl font-semibold text-slate-900 lesson-title">
           <i class="fa-solid fa-book-open text-indigo-600"></i>
           تعريف معالج النصوص
         </h2>
-        <div class="bg-white border border-slate-200 rounded-xl p-4 md:p-5">
-          <p>معالج النصوص هو برنامج حاسوبي يُستخدم لإنشاء وتحرير وتنسيق النصوص بطريقة رقمية، مع إمكانية إدراج الصور والجداول والرموز، وحفظ المستندات وطباعتها بسهولة.</p>
+        <div class="bg-white border border-slate-200 rounded-xl p-4 md:p-5 colored-card">
+          <p>معالج النصوص هو برنامج حاسوبي يُستخدم لإنشاء وتحرير وتنسيق النصوص بطريقة رقمية، مع إمكانية إدراج <span
+              class="important">الصور</span> و<span class="important">الجداول</span> و<span
+              class="important">الرموز</span>، و<span class="important">حفظ</span> المستندات و<span
+              class="important">طباعتها</span> بسهولة.</p>
         </div>
       </div>
 
       <!-- أهمية معالج النصوص -->
       <div class="space-y-3 break-inside-avoid">
-        <h3 class="flex items-center gap-2 text-base md:text-lg font-semibold text-slate-900">
+        <h3 class="flex items-center gap-2 text-base md:text-lg font-semibold text-slate-900 lesson-title">
           <i class="fa-solid fa-star text-indigo-600"></i>
           أهمية معالج النصوص
         </h3>
-        <ul class="space-y-2 bg-white border border-slate-200 rounded-xl p-4 md:p-5">
-          <li class="flex items-start gap-2"><i class="fa-solid fa-file-lines text-indigo-600 mt-1"></i><span>تسهيل كتابة وتعديل النصوص بسرعة وسهولة.</span></li>
-          <li class="flex items-start gap-2"><i class="fa-solid fa-paint-brush text-indigo-600 mt-1"></i><span>إمكانية تنسيق النص (حجم الخط، اللون، المحاذاة...إلخ).</span></li>
-          <li class="flex items-start gap-2"><i class="fa-solid fa-image text-indigo-600 mt-1"></i><span>إدراج الصور والجداول والرسوم البيانية.</span></li>
-          <li class="flex items-start gap-2"><i class="fa-solid fa-print text-indigo-600 mt-1"></i><span>إمكانية حفظ وطباعة المستندات.</span></li>
-          <li class="flex items-start gap-2"><i class="fa-solid fa-globe text-indigo-600 mt-1"></i><span>مشاركة الملفات إلكترونياً.</span></li>
+        <ul class="space-y-2 bg-white border border-slate-200 rounded-xl p-4 md:p-5 colored-card">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-file-lines text-indigo-600 mt-1"></i><span>تسهيل
+              <span class="important">كتابة</span> وتعديل النصوص بسرعة وسهولة.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-paint-brush text-indigo-600 mt-1"></i><span>إمكانية
+              <span class="important">تنسيق النص</span> (حجم الخط، اللون، المحاذاة...إلخ).</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-image text-indigo-600 mt-1"></i><span>إدراج <span
+                class="important">الصور</span> و<span class="important">الجداول</span> والرسوم البيانية.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-print text-indigo-600 mt-1"></i><span>إمكانية <span
+                class="important">حفظ</span> و<span class="important">طباعة</span> المستندات.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-globe text-indigo-600 mt-1"></i><span>مشاركة الملفات
+              <span class="important">إلكترونياً</span>.</span></li>
         </ul>
       </div>
 
@@ -115,7 +169,7 @@
           <i class="fa-solid fa-laptop-code text-indigo-600"></i>
           أمثلة على معالجات النصوص
         </h3>
-        <div class="overflow-hidden rounded-xl ring-1 ring-slate-200">
+        <div class="overflow-hidden rounded-xl ring-1 ring-slate-200 colored-card">
           <table class="w-full text-sm">
             <thead class="bg-slate-50 text-slate-700">
               <tr>
@@ -126,7 +180,8 @@
             </thead>
             <tbody class="divide-y divide-slate-200">
               <tr>
-                <td class="py-3 px-3"><i class="fa-brands fa-microsoft text-indigo-600 ml-1"></i> Microsoft Word</td>
+                <td class="py-3 px-3"><i class="fa-brands fa-microsoft text-indigo-600 ml-1"></i> <span
+                    class="important">Microsoft Word</span></td>
                 <td class="py-3 px-3">Microsoft</td>
                 <td class="py-3 px-3">الأكثر شهرة واستخداماً</td>
               </tr>
@@ -152,16 +207,23 @@
 
       <!-- أهم مكونات نافذة Microsoft Word -->
       <div class="space-y-3 break-inside-avoid">
-        <h3 class="flex items-center gap-2 text-base md:text-lg font-semibold text-slate-900">
+        <h3 class="flex items-center gap-2 text-base md:text-lg font-semibold text-slate-900 lesson-title">
           <i class="fa-solid fa-window-maximize text-indigo-600"></i>
           مكونات نافذة Microsoft Word الأساسية
         </h3>
-        <ul class="space-y-2 bg-white border border-slate-200 rounded-xl p-4 md:p-5">
-          <li class="flex items-start gap-2"><i class="fa-solid fa-bars text-indigo-600 mt-1"></i><span>شريط العنوان: يظهر اسم المستند والبرنامج.</span></li>
-          <li class="flex items-start gap-2"><i class="fa-solid fa-bars-staggered text-indigo-600 mt-1"></i><span>شريط القوائم: يحتوي على قوائم مثل ملف، تحرير، عرض...</span></li>
-          <li class="flex items-start gap-2"><i class="fa-solid fa-grip-lines text-indigo-600 mt-1"></i><span>شريط الأدوات: يضم أزرار التحكم (نسخ، لصق، طباعة...)</span></li>
-          <li class="flex items-start gap-2"><i class="fa-solid fa-file-lines text-indigo-600 mt-1"></i><span>منطقة الكتابة: المساحة الرئيسية لإدخال النصوص.</span></li>
-          <li class="flex items-start gap-2"><i class="fa-solid fa-magnifying-glass-plus text-indigo-600 mt-1"></i><span>شريط الحالة: يعرض معلومات عن الصفحة وحالة المستند.</span></li>
+        <ul class="space-y-2 bg-white border border-slate-200 rounded-xl p-4 md:p-5 colored-card">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-bars text-indigo-600 mt-1"></i><span>شريط العنوان:
+              يظهر اسم المستند والبرنامج.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-bars-staggered text-indigo-600 mt-1"></i><span>شريط
+              القوائم: يحتوي على قوائم مثل <span class="important">ملف</span>، <span class="important">تحرير</span>،
+              <span class="important">عرض</span>...</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-grip-lines text-indigo-600 mt-1"></i><span>شريط
+              الأدوات: يضم أزرار التحكم (نسخ، لصق، طباعة...)</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-file-lines text-indigo-600 mt-1"></i><span>منطقة
+              <span class="important">الكتابة</span>: المساحة الرئيسية لإدخال النصوص.</span></li>
+          <li class="flex items-start gap-2"><i
+              class="fa-solid fa-magnifying-glass-plus text-indigo-600 mt-1"></i><span>شريط الحالة: يعرض معلومات عن
+              الصفحة وحالة المستند.</span></li>
         </ul>
       </div>
 
@@ -171,13 +233,15 @@
           <i class="fa-solid fa-list-check text-indigo-600"></i>
           نشاط تطبيقي
         </h2>
-        <div class="bg-gradient-to-l from-indigo-50 to-sky-50 border border-indigo-100 rounded-xl p-4 md:p-5">
+        <div
+          class="bg-gradient-to-l from-indigo-50 to-sky-50 border border-indigo-100 rounded-xl p-4 md:p-5 colored-card">
           <p class="leading-8">
             افتح برنامج Microsoft Word (أو أي معالج نصوص آخر متاح لديك)، وقم بما يلي:
           </p>
           <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
             <div class="flex items-start gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i
-                class="fa-solid fa-file-pen text-emerald-600 mt-0.5"></i><span>اكتب فقرة قصيرة عن هوايتك المفضلة.</span>
+                class="fa-solid fa-file-pen text-emerald-600 mt-0.5"></i><span>اكتب فقرة قصيرة عن <span
+                  class="important">هوايتك المفضلة</span>.</span>
             </div>
             <div class="flex items-start gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i
                 class="fa-solid fa-paint-roller text-amber-500 mt-0.5"></i><span>قم بتغيير حجم الخط ولونه.</span>
@@ -195,11 +259,14 @@
           <i class="fa-solid fa-bullseye text-indigo-600"></i>
           الخلاصة
         </h2>
-        <div class="bg-white border border-slate-200 rounded-xl p-4 md:p-5">
-          <p>معالج النصوص هو أداة أساسية لإنشاء وتنسيق النصوص بشكل احترافي وسريع. برنامج Microsoft Word هو الأشهر في هذا المجال ويساعدك على تطوير مهاراتك الكتابية والعلمية.</p>
+        <div class="bg-white border border-slate-200 rounded-xl p-4 md:p-5 colored-card">
+          <p>معالج النصوص هو أداة أساسية لإنشاء وتنسيق النصوص بشكل احترافي وسريع. برنامج <span
+              class="important">Microsoft Word</span> هو الأشهر في هذا المجال ويساعدك على تطوير مهاراتك الكتابية
+            والعلمية.</p>
         </div>
       </div>
     </section>
   </main>
 </body>
+
 </html>
