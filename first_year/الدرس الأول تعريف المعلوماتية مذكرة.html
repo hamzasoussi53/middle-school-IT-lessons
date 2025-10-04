@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,30 +14,51 @@
   <!-- AlpineJS -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <style>
-    @page { size: A4; margin: 14mm; }
-    @media print {
-      .no-print { display: none !important; }
-      .page { box-shadow: none !important; border: none !important; }
-      .break-inside-avoid { break-inside: avoid; }
+    @page {
+      size: A4;
+      margin: 14mm;
     }
-    body { background: #f1f5f9; }
+
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+
+      .page {
+        box-shadow: none !important;
+        border: none !important;
+      }
+
+      .break-inside-avoid {
+        break-inside: avoid;
+      }
+    }
+
+    body {
+      background: #f1f5f9;
+    }
   </style>
 </head>
+
 <body class="font-sans text-slate-800">
   <div class="no-print sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="max-w-4xl mx-auto px-4 py-2 flex items-center justify-between">
       <div class="text-sm text-slate-600">ملف قابل للطباعة على ورق A4</div>
-      <button onclick="window.print()" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 text-white hover:bg-slate-700">
+      <button onclick="window.print()"
+        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 text-white hover:bg-slate-700">
         <i class="fa-solid fa-print"></i><span>طباعة</span>
       </button>
     </div>
   </div>
 
-  <main x-data class="page max-w-4xl mx-auto my-6 md:my-10 bg-white shadow-xl rounded-xl ring-1 ring-slate-200 overflow-hidden">
+  <main x-data
+    class="page max-w-4xl mx-auto my-6 md:my-10 bg-white shadow-xl rounded-xl ring-1 ring-slate-200 overflow-hidden">
     <!-- Header / School Info -->
-    <header class="relative p-6 md:p-8 bg-gradient-to-l from-sky-50 to-indigo-50 border-b animate__animated animate__fadeInDown">
+    <header
+      class="relative p-6 md:p-8 bg-gradient-to-l from-sky-50 to-indigo-50 border-b animate__animated animate__fadeInDown">
       <div class="flex items-center gap-4">
-        <div class="shrink-0 w-14 h-14 rounded-xl bg-white ring-1 ring-slate-200 grid place-items-center text-indigo-600">
+        <div
+          class="shrink-0 w-14 h-14 rounded-xl bg-white ring-1 ring-slate-200 grid place-items-center text-indigo-600">
           <i class="fa-solid fa-school text-2xl"></i>
         </div>
         <div class="flex-1">
@@ -52,17 +74,24 @@
       </div>
 
       <div class="mt-5 grid grid-cols-2 md:grid-cols-4 gap-2 text-[13px] text-slate-700">
-        <div class="flex items-center gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i class="fa-solid fa-layer-group text-indigo-600"></i><span>المستوى: السنة الأولى متوسط</span></div>
-        <div class="flex items-center gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i class="fa-solid fa-user-tie text-indigo-600"></i><span>الأستاذ: سوسي حمزة</span></div>
-        <div class="flex items-center gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i class="fa-solid fa-hashtag text-indigo-600"></i><span>مذكرة رقم: 01</span></div>
-        <div class="flex items-center gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i class="fa-regular fa-clock text-indigo-600"></i><span>المدة: 1 ساعة</span></div>
+        <div class="flex items-center gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i
+            class="fa-solid fa-layer-group text-indigo-600"></i><span>المستوى: السنة الأولى متوسط</span></div>
+        <div class="flex items-center gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i
+            class="fa-solid fa-user-tie text-indigo-600"></i><span>الأستاذ: سوسي حمزة</span></div>
+        <div class="flex items-center gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i
+            class="fa-solid fa-hashtag text-indigo-600"></i><span>مذكرة رقم: 01</span></div>
+        <div class="flex items-center gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i
+            class="fa-regular fa-clock text-indigo-600"></i><span>المدة: 1 ساعة</span></div>
       </div>
     </header>
 
     <section class="p-6 md:p-8 space-y-6">
       <!-- Welcome / Intro -->
-      <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 md:p-5 leading-8 animate__animated animate__fadeInUp break-inside-avoid">
-        <p>أهلا وسهلا بكم أعزائي التلاميذ في الدرس الأول للسنة أولى متوسط في مادة الإعلام الآلي أو المعلوماتية، وكما يسمى أيضا علم الحاسوب. سوف تكون الحصة الأولى مدخلا إلى علم الحاسوب نعطي من خلاله نظرة عامة حول هذا العلم وكيف أصبح عنوانا للتطور في جل العلوم وفي مختلف الميادين.</p>
+      <div
+        class="bg-slate-50 border border-slate-200 rounded-xl p-4 md:p-5 leading-8 animate__animated animate__fadeInUp break-inside-avoid">
+        <p>أهلا وسهلا بكم أعزائي التلاميذ في الدرس الأول للسنة أولى متوسط في مادة الإعلام الآلي أو المعلوماتية، وكما
+          يسمى أيضا علم الحاسوب. سوف تكون الحصة الأولى مدخلا إلى علم الحاسوب نعطي من خلاله نظرة عامة حول هذا العلم وكيف
+          أصبح عنوانا للتطور في جل العلوم وفي مختلف الميادين.</p>
       </div>
 
       <!-- Origin of the term -->
@@ -72,7 +101,8 @@
           أصل كلمة المعلوماتية
         </h2>
         <div class="bg-white border border-slate-200 rounded-xl p-4 md:p-5">
-          <p>كلمة المعلوماتية هي مصطلح مركب من كلمتين هما "المعلومات" و"آلية"، وفي الأصل مأخوذة من المصطلح الفرنسي لعلم الحاسوب وهو "Informatique" الذي يعني بدوره Information Automatique أي المعالجة الآلية للمعلومات.</p>
+          <p>كلمة المعلوماتية هي مصطلح مركب من كلمتين هما "المعلومات" و"آلية"، وفي الأصل مأخوذة من المصطلح الفرنسي لعلم
+            الحاسوب وهو "Informatique" الذي يعني بدوره Information Automatique أي المعالجة الآلية للمعلومات.</p>
         </div>
       </div>
 
@@ -104,7 +134,8 @@
             </thead>
             <tbody class="divide-y divide-slate-200">
               <tr>
-                <td class="py-3 px-3"><i class="fa-regular fa-hard-drive text-indigo-600 ml-1"></i> العتاد (Hardware)</td>
+                <td class="py-3 px-3"><i class="fa-regular fa-hard-drive text-indigo-600 ml-1"></i> العتاد (Hardware)
+                </td>
                 <td class="py-3 px-3">يمثل الحاسوب وملحقاته</td>
                 <td class="py-3 px-3">الشاشة، لوحة المفاتيح، الفأرة، الطابعة</td>
               </tr>
@@ -125,8 +156,11 @@
           أنواع البرمجيات
         </h4>
         <ul class="space-y-2 bg-white border border-slate-200 rounded-xl p-4 md:p-5">
-          <li class="flex items-start gap-2"><i class="fa-solid fa-microchip text-indigo-600 mt-1"></i><span>أنظمة التشغيل: هي البرمجيات المسؤولة على إقلاع الحاسوب وتشغيله والتحكم فيه.</span></li>
-          <li class="flex items-start gap-2"><i class="fa-regular fa-square-check text-indigo-600 mt-1"></i><span>التطبيقات: هي البرامج المثبتة بعد تثبيت نظام التشغيل والتي لها مهمة معينة مثل: برامج الرسم، الكتابة وتشغيل الفيديوهات.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-microchip text-indigo-600 mt-1"></i><span>أنظمة
+              التشغيل: هي البرمجيات المسؤولة على إقلاع الحاسوب وتشغيله والتحكم فيه.</span></li>
+          <li class="flex items-start gap-2"><i
+              class="fa-regular fa-square-check text-indigo-600 mt-1"></i><span>التطبيقات: هي البرامج المثبتة بعد تثبيت
+              نظام التشغيل والتي لها مهمة معينة مثل: برامج الرسم، الكتابة وتشغيل الفيديوهات.</span></li>
         </ul>
       </div>
 
@@ -175,12 +209,20 @@
         </h2>
         <div class="bg-gradient-to-l from-indigo-50 to-sky-50 border border-indigo-100 rounded-xl p-4 md:p-5">
           <p class="leading-8">
-            ابحث في جهاز الكمبيوتر لديك أو هاتفك الذكي عن برامج يمكنها القيام بمهام مثل الكتابة أو الرسم أو تشغيل الفيديوهات، ثم سجل أسماء هذه البرامج في دفتر ملاحظاتك. اختر برنامجاً واحداً لتكتشف المزيد عنه وشارك نتائج بحثك مع زملائك في الدرس القادم.
+            ابحث في جهاز الكمبيوتر لديك أو هاتفك الذكي عن برامج يمكنها القيام بمهام مثل الكتابة أو الرسم أو تشغيل
+            الفيديوهات، ثم سجل أسماء هذه البرامج في دفتر ملاحظاتك. اختر برنامجاً واحداً لتكتشف المزيد عنه وشارك نتائج
+            بحثك مع زملائك في الدرس القادم.
           </p>
           <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
-            <div class="flex items-start gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i class="fa-solid fa-check text-emerald-600 mt-0.5"></i><span>اذكر 3 برامج على الأقل لكل مهمة.</span></div>
-            <div class="flex items-start gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i class="fa-solid fa-lightbulb text-amber-500 mt-0.5"></i><span>اختر برنامجاً واحداً للبحث المتعمق.</span></div>
-            <div class="flex items-start gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i class="fa-solid fa-user-group text-indigo-600 mt-0.5"></i><span>حضّر لعرض مختصر في الحصة القادمة.</span></div>
+            <div class="flex items-start gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i
+                class="fa-solid fa-check text-emerald-600 mt-0.5"></i><span>اذكر 3 برامج على الأقل لكل مهمة.</span>
+            </div>
+            <div class="flex items-start gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i
+                class="fa-solid fa-lightbulb text-amber-500 mt-0.5"></i><span>اختر برنامجاً واحداً للبحث المتعمق.</span>
+            </div>
+            <div class="flex items-start gap-2 bg-white/70 rounded-lg px-3 py-2 ring-1 ring-slate-200"><i
+                class="fa-solid fa-user-group text-indigo-600 mt-0.5"></i><span>حضّر لعرض مختصر في الحصة القادمة.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -195,12 +237,8 @@
           <p>المعلوماتية علم حديث يجمع بين العتاد والبرمجيات لمعالجة المعلومات آلياً.</p>
         </div>
       </div>
-
-      <!-- Footer note -->
-      <div class="text-[12px] text-slate-500 pt-4 border-t border-slate-200">
-        تم إعداد هذه المذكرة لتكون مطبوعة على ورق A4 مع الحفاظ على تنسيق احترافي وواضح.
-      </div>
     </section>
   </main>
 </body>
+
 </html>
