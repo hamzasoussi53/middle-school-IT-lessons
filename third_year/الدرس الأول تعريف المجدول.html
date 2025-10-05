@@ -64,47 +64,47 @@
 
         /* Gradient helper */
         .grad-1 {
-            background: linear-gradient(135deg, #06b6d4, #22c55e);
+            background: linear-gradient(135deg, #a7f3d0, #a5f3fc); /* Lighter green/cyan */
         }
 
         .grad-2 {
-            background: linear-gradient(135deg, #6366f1, #ec4899);
+            background: linear-gradient(135deg, #c4b5fd, #fbcfe8); /* Lighter indigo/pink */
         }
 
         .grad-3 {
-            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            background: linear-gradient(135deg, #fde68a, #fca5a5); /* Lighter amber/red */
         }
 
         .grad-4 {
-            background: linear-gradient(135deg, #14b8a6, #3b82f6);
+            background: linear-gradient(135deg, #99f6e4, #bfdbfe); /* Lighter teal/blue */
         }
 
         .grad-5 {
-            background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+            background: linear-gradient(135deg, #d8b4fe, #a5f3fc); /* Lighter purple/cyan */
         }
 
         .grad-6 {
-            background: linear-gradient(135deg, #f43f5e, #22c55e);
+            background: linear-gradient(135deg, #fda4af, #a7f3d0); /* Lighter rose/green */
         }
 
         .grad-7 {
-            background: linear-gradient(135deg, #0ea5e9, #a3e635);
+            background: linear-gradient(135deg, #bae6fd, #d9f99d); /* Lighter sky/lime */
         }
     </style>
 </head>
 
-<body class="bg-slate-900 text-white selection:bg-amber-300 selection:text-slate-900" x-data="{ slide: 1 }">
+<body class="bg-slate-50 text-slate-800 selection:bg-amber-300 selection:text-slate-900" x-data="{ slide: 1 }">
     <!-- Top nav helpers -->
     <div class="fixed top-4 left-4 right-4 z-50 flex items-center gap-2 justify-between pointer-events-none">
         <div class="flex gap-2 pointer-events-auto">
-            <a href="#welcome" class="px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 text-sm">بداية</a>
-            <a href="#motivation" class="px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 text-sm">سؤال تحفيزي</a>
-            <a href="#definition" class="px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 text-sm">التعريف</a>
-            <a href="#steps" class="px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 text-sm">خطوات التشغيل</a>
-            <a href="#interface" class="px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 text-sm">مكوّنات
+            <a href="#welcome" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">بداية</a>
+            <a href="#motivation" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">سؤال تحفيزي</a>
+            <a href="#definition" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">التعريف</a>
+            <a href="#steps" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">خطوات التشغيل</a>
+            <a href="#interface" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">مكوّنات
                 النافذة</a>
-            <a href="#activity" class="px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 text-sm">نشاط تطبيقي</a>
-            <a href="#summary" class="px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 text-sm">الخلاصة</a>
+            <a href="#activity" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">نشاط تطبيقي</a>
+            <a href="#summary" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">الخلاصة</a>
         </div>
         <div class="hidden md:flex items-center gap-2 pointer-events-auto">
             <i class="fa-solid fa-table-cells text-amber-300"></i>
@@ -127,7 +127,7 @@
                     <i class="fa-solid fa-chart-column"></i>
                     <i class="fa-solid fa-calculator"></i>
                 </div>
-                <p class="mt-8 text-lg bg-white/10 rounded-2xl inline-block px-6 py-3">
+                <p class="mt-8 text-lg bg-black/5 rounded-2xl inline-block px-6 py-3">
                     سنتعرف على مفهوم المجدول، مكوّناته، وكيفية فتح ملف والعمل عليه مع نشاط عملي.
                 </p>
             </div>
@@ -152,7 +152,7 @@
                 <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
                     تعريف المجدول Excel <i class="fa-solid fa-book-open text-lime-300"></i>
                 </h2>
-                <p class="text-2xl md:text-3xl leading-relaxed text-center bg-white/10 rounded-2xl p-6">
+                <p class="text-2xl md:text-3xl leading-relaxed text-center bg-black/5 rounded-2xl p-6">
                     المجدول هو برنامج يُستخدم لإدخال البيانات النصية والعددية في جداول إلكترونية، ويسمح بإجراء
                     العمليات الحسابية عليها وتنسيقها وعرضها باستخدام الرسومات البيانية. أشهر مثال: Microsoft Excel.
                 </p>
@@ -166,14 +166,14 @@
                     خطوات تشغيل المجدول Excel <i class="fa-solid fa-play text-sky-200"></i>
                 </h2>
                 <div class="grid md:grid-cols-2 gap-8 text-2xl md:text-3xl leading-relaxed">
-                    <div class="bg-white/10 rounded-3xl p-6 shadow-xl">
+                    <div class="bg-black/5 rounded-3xl p-6 shadow-xl">
                         <ul class="list-disc pr-6 space-y-3">
                             <li>انقر بزر الفأرة الأيمن في مكان فارغ على سطح المكتب.</li>
                             <li>اختر تعليمة "جديد".</li>
                             <li>اختر من القائمة الفرعية "ورقة عمل Excel".</li>
                         </ul>
                     </div>
-                    <div class="bg-white/10 rounded-3xl p-6 shadow-xl">
+                    <div class="bg-black/5 rounded-3xl p-6 shadow-xl">
                         <p class="text-2xl">يمكنك أيضًا فتح Excel من قائمة ابدأ أو من شريط المهام إذا كان مثبتًا.</p>
                     </div>
                 </div>
@@ -187,14 +187,14 @@
                     مكوّنات نافذة Excel الأساسية <i class="fa-solid fa-window-maximize text-emerald-200"></i>
                 </h2>
                 <div class="grid md:grid-cols-2 gap-8 text-2xl md:text-3xl leading-relaxed">
-                    <div class="bg-white/10 rounded-3xl p-6 shadow-xl">
+                    <div class="bg-black/5 rounded-3xl p-6 shadow-xl">
                         <ul class="list-disc pr-6 space-y-3">
                             <li>شريط العنوان: يظهر اسم البرنامج والمستند.</li>
                             <li>شريط التبويبات: قوائم مثل ملف، إدراج، تخطيط الصفحة.</li>
                             <li>شريط الأدوات: أزرار التحكم الرئيسية.</li>
                         </ul>
                     </div>
-                    <div class="bg-white/10 rounded-3xl p-6 shadow-xl">
+                    <div class="bg-black/5 rounded-3xl p-6 shadow-xl">
                         <ul class="list-disc pr-6 space-y-3">
                             <li>ورقة العمل: المساحة لإدخال البيانات.</li>
                             <li>علامات تبويب أوراق العمل: للتنقل بين الأوراق.</li>
@@ -211,14 +211,14 @@
                 <h2 class="text-4xl md:text-6xl font-bold mb-8">
                     نشاط تطبيقي <i class="fa-solid fa-list-check text-yellow-300"></i>
                 </h2>
-                <p class="text-2xl md:text-3xl leading-relaxed bg-white/10 rounded-2xl p-6">
+                <p class="text-2xl md:text-3xl leading-relaxed bg-black/5 rounded-2xl p-6">
                     افتح برنامج Microsoft Excel وقم بتنفيذ ما يلي:
                 </p>
                 <div class="mt-6 grid md:grid-cols-2 gap-4 text-2xl">
-                    <div class="bg-white/10 rounded-2xl p-4">أنشئ ملف جديد وسمه "التطبيق الثاني".</div>
-                    <div class="bg-white/10 rounded-2xl p-4">أعد تسمية أوراق العمل إلى: ورقة1، ورقة2، ورقة3.</div>
-                    <div class="bg-white/10 rounded-2xl p-4">أضف ورقة عمل جديدة وسمها ورقة4.</div>
-                    <div class="bg-white/10 rounded-2xl p-4">غيّر اتجاه ورقة العمل من اليمين إلى اليسار.</div>
+                    <div class="bg-black/5 rounded-2xl p-4">أنشئ ملف جديد وسمه "التطبيق الثاني".</div>
+                    <div class="bg-black/5 rounded-2xl p-4">أعد تسمية أوراق العمل إلى: ورقة1، ورقة2، ورقة3.</div>
+                    <div class="bg-black/5 rounded-2xl p-4">أضف ورقة عمل جديدة وسمها ورقة4.</div>
+                    <div class="bg-black/5 rounded-2xl p-4">غيّر اتجاه ورقة العمل من اليمين إلى اليسار.</div>
                 </div>
             </div>
         </section>
@@ -229,12 +229,12 @@
                 <h2 class="text-4xl md:text-6xl font-bold mb-8">
                     الخلاصة <i class="fa-solid fa-star text-yellow-300"></i>
                 </h2>
-                <p class="text-2xl md:text-3xl leading-relaxed bg-white/10 rounded-2xl p-6">
+                <p class="text-2xl md:text-3xl leading-relaxed bg-black/5 rounded-2xl p-6">
                     المجدول أداة فعالة لمعالجة البيانات الحسابية وتنسيقها وعرضها بشكل منظم. برنامج Excel يساعد على
                     تسهيل العمليات الحسابية وتجنب الأخطاء.
                 </p>
                 <div class="mt-8">
-                    <a href="#welcome" class="px-6 py-3 rounded-full bg-white/15 hover:bg-white/25 text-lg">العودة
+                    <a href="#welcome" class="px-6 py-3 rounded-full bg-black/5 hover:bg-black/10 text-lg">العودة
                         للبداية <i class="fa-solid fa-arrow-up-long"></i></a>
                 </div>
             </div>
@@ -243,7 +243,7 @@
 
     <!-- Footer watermark -->
     <footer class="fixed bottom-3 left-0 right-0 z-40 flex justify-center pointer-events-none">
-        <div class="pointer-events-auto text-xs md:text-sm px-3 py-1 rounded-full bg-black/30 backdrop-blur">
+        <div class="pointer-events-auto text-xs md:text-sm px-3 py-1 rounded-full bg-black/10 backdrop-blur text-slate-600">
             إعداد: الأستاذ سوسي حمزة — السنة الثالثة متوسط
         </div>
     </footer>
