@@ -23,8 +23,12 @@
         html,
         body {
             height: 100%;
-            font-size: 20px;
+            font-size: 20px; 
             font-family: "Cairo", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "slnt" 0;
             /* More line spacing for projector readability */
             line-height: 1.8;
         }
@@ -58,8 +62,8 @@
         /* Ensure paragraphs and lists have comfortable spacing */
         .snap-slide p,
         .snap-slide li {
-            line-height: 1.8;
-            margin-bottom: 0.6rem;
+            line-height: 2;
+            margin-bottom: 0.8rem;
         }
 
         /* Gradient helper */
@@ -93,7 +97,7 @@
     </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 selection:bg-amber-300 selection:text-slate-900" x-data="{ slide: 1 }">
+<body class="bg-white text-slate-900 selection:bg-amber-300 selection:text-slate-900" x-data="{ slide: 1 }">
     <!-- Top nav helpers -->
     <div class="fixed top-4 left-4 right-4 z-50 flex items-center gap-2 justify-between pointer-events-none">
         <div class="flex gap-2 pointer-events-auto">
@@ -128,7 +132,7 @@
                     <i class="fa-solid fa-keyboard"></i>
                     <i class="fa-solid fa-print"></i>
                 </div>
-                <p class="mt-8 text-lg bg-black/5 rounded-2xl inline-block px-6 py-3">
+                <p class="mt-8 text-lg bg-slate-100 rounded-2xl inline-block px-6 py-3 shadow-lg">
                     سنتعرّف على معنى معالج النصوص، أمثلته، ومكوّنات نافذته مع نشاط عملي.
                 </p>
             </div>
@@ -138,7 +142,7 @@
         <section id="origin" class="snap-slide grad-7 flex items-center justify-center p-8">
             <div class="max-w-5xl animate__animated animate__fadeInUp">
                 <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
-                    أصل مصطلح "معالج النصوص" <i class="fa-solid fa-magnifying-glass text-yellow-300"></i>
+                    أصل مصطلح "معالج النصوص" <i class="fa-solid fa-magnifying-glass text-yellow-300 drop-shadow-lg"></i>
                 </h2>
                 <div class="text-2xl md:text-3xl leading-relaxed space-y-6 text-center">
                     <p>
@@ -156,7 +160,7 @@
         <section id="definition" class="snap-slide grad-1 flex items-center justify-center p-8">
             <div class="max-w-5xl animate__animated animate__fadeInUp">
                 <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
-                    تعريف معالج النصوص <i class="fa-solid fa-circle-info text-lime-300"></i>
+                    تعريف معالج النصوص <i class="fa-solid fa-circle-info text-lime-300 drop-shadow-lg"></i>
                 </h2>
                 <p class="text-2xl md:text-3xl leading-relaxed text-center">
                     معالج النصوص هو برنامج حاسوبي يُستخدم لإنشاء وتحرير وتنسيق النصوص بطريقة رقمية، مع إمكانية إدراج
@@ -169,17 +173,17 @@
         <section id="importance" class="snap-slide grad-4 flex items-center justify-center p-8">
             <div class="max-w-6xl w-full animate__animated animate__fadeInUp">
                 <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
-                    أهمية معالج النصوص <i class="fa-solid fa-star text-sky-200"></i>
+                    أهمية معالج النصوص <i class="fa-solid fa-star text-sky-200 drop-shadow-lg"></i>
                 </h2>
                 <div class="grid md:grid-cols-2 gap-8 text-2xl md:text-3xl leading-relaxed">
-                    <div class="bg-black/5 rounded-3xl p-6 shadow-xl">
+                    <div class="bg-slate-100 rounded-3xl p-6 shadow-lg">
                         <ul class="list-disc pr-6 space-y-3">
                             <li>تسهيل كتابة وتعديل النصوص بسرعة وسهولة.</li>
                             <li>إمكانية تنسيق النص (حجم الخط، اللون، المحاذاة).</li>
                             <li>إدراج الصور والجداول والرسوم البيانية.</li>
                         </ul>
                     </div>
-                    <div class="bg-black/5 rounded-3xl p-6 shadow-xl">
+                    <div class="bg-slate-100 rounded-3xl p-6 shadow-lg">
                         <ul class="list-disc pr-6 space-y-3">
                             <li>إمكانية حفظ وطباعة المستندات.</li>
                             <li>مشاركة الملفات إلكترونيًا بسهولة.</li>
@@ -193,18 +197,18 @@
         <section id="examples" class="snap-slide grad-5 flex items-center justify-center p-8">
             <div class="max-w-6xl animate__animated animate__fadeInUp">
                 <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
-                    أمثلة على معالجات النصوص <i class="fa-solid fa-laptop-code text-cyan-200"></i>
+                    أمثلة على معالجات النصوص <i class="fa-solid fa-laptop-code text-cyan-200 drop-shadow-lg"></i>
                 </h2>
-                <div class="overflow-hidden rounded-2xl ring-1 ring-slate-200 bg-black/5">
+                <div class="overflow-hidden rounded-2xl ring-1 ring-slate-200 bg-slate-100 shadow-lg">
                     <table class="w-full text-2xl md:text-3xl">
-                        <thead class="bg-black/5 text-slate-700">
+                        <thead class="bg-slate-200 text-slate-800">
                             <tr>
                                 <th class="py-4 px-4 text-right font-semibold">اسم البرنامج</th>
                                 <th class="py-4 px-4 text-right font-semibold">الشركة المنتجة</th>
                                 <th class="py-4 px-4 text-right font-semibold">ملاحظات</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-black/5">
+                        <tbody class="divide-y divide-slate-200">
                             <tr>
                                 <td class="py-4 px-4"><i class="fa-brands fa-microsoft text-indigo-300 ml-2"></i>
                                     Microsoft Word</td>
@@ -239,17 +243,17 @@
         <section id="components" class="snap-slide grad-6 flex items-center justify-center p-8">
             <div class="max-w-6xl animate__animated animate__fadeInUp">
                 <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
-                    مكوّنات نافذة معالج النصوص <i class="fa-solid fa-window-maximize text-emerald-200"></i>
+                    مكوّنات نافذة معالج النصوص <i class="fa-solid fa-window-maximize text-emerald-200 drop-shadow-lg"></i>
                 </h2>
                 <div class="grid md:grid-cols-2 gap-8 text-2xl md:text-3xl leading-relaxed">
-                    <div class="bg-black/5 rounded-3xl p-6 shadow-xl">
+                    <div class="bg-slate-100 rounded-3xl p-6 shadow-lg">
                         <ul class="list-disc pr-6 space-y-3">
                             <li>شريط العنوان: يظهر اسم المستند والبرنامج.</li>
                             <li>شريط القوائم: يحتوي على قوائم مثل ملف، تحرير، عرض...</li>
                             <li>شريط الأدوات: أزرار التحكم مثل نسخ، لصق، طباعة.</li>
                         </ul>
                     </div>
-                    <div class="bg-black/5 rounded-3xl p-6 shadow-xl">
+                    <div class="bg-slate-100 rounded-3xl p-6 shadow-lg">
                         <ul class="list-disc pr-6 space-y-3">
                             <li>منطقة الكتابة: المساحة الرئيسية لإدخال النصوص.</li>
                             <li>شريط الحالة: يعرض معلومات عن الصفحة وحالة المستند.</li>
@@ -263,15 +267,15 @@
         <section id="activity" class="snap-slide grad-3 flex items-center justify-center p-8">
             <div class="max-w-6xl animate__animated animate__fadeInUp text-center">
                 <h2 class="text-4xl md:text-6xl font-bold mb-8">
-                    نشاط تطبيقي <i class="fa-solid fa-list-check text-yellow-300"></i>
+                    نشاط تطبيقي <i class="fa-solid fa-list-check text-yellow-300 drop-shadow-lg"></i>
                 </h2>
                 <p class="text-2xl md:text-3xl leading-relaxed">
                     افتح برنامج معالج نصوص (مثل Word أو Google Docs) وقم بما يلي:
                 </p>
                 <div class="mt-6 grid md:grid-cols-3 gap-4 text-2xl">
-                    <div class="bg-black/5 rounded-2xl p-4">اكتب فقرة قصيرة عن هوايتك المفضلة.</div>
-                    <div class="bg-black/5 rounded-2xl p-4">غيّر حجم الخط ولونه.</div>
-                    <div class="bg-black/5 rounded-2xl p-4">أدْرِج صورة مناسبة في المستند.</div>
+                    <div class="bg-slate-100 rounded-2xl p-4 shadow-lg">اكتب فقرة قصيرة عن هوايتك المفضلة.</div>
+                    <div class="bg-slate-100 rounded-2xl p-4 shadow-lg">غيّر حجم الخط ولونه.</div>
+                    <div class="bg-slate-100 rounded-2xl p-4 shadow-lg">أدْرِج صورة مناسبة في المستند.</div>
                 </div>
             </div>
         </section>
@@ -280,14 +284,14 @@
         <section id="summary" class="snap-slide grad-1 flex items-center justify-center p-8">
             <div class="max-w-5xl text-center animate__animated animate__fadeInUp">
                 <h2 class="text-4xl md:text-6xl font-bold mb-8">
-                    الخلاصة <i class="fa-solid fa-star text-yellow-300"></i>
+                    الخلاصة <i class="fa-solid fa-star text-yellow-300 drop-shadow-lg"></i>
                 </h2>
                 <p class="text-2xl md:text-3xl leading-relaxed">
                     معالج النصوص أداة أساسية لكتابة وتنسيق المستندات. تعلم استخدامه يساعدك على تحسين أعمالك الدراسية
                     والمهنية.
                 </p>
                 <div class="mt-8">
-                    <a href="#welcome" class="px-6 py-3 rounded-full bg-black/5 hover:bg-black/10 text-lg">العودة
+                    <a href="#welcome" class="px-6 py-3 rounded-full bg-slate-100 hover:bg-slate-200 text-lg shadow-lg">العودة
                         للبداية
                         <i class="fa-solid fa-arrow-up-long"></i></a>
                 </div>

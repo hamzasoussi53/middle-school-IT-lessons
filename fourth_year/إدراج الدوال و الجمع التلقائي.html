@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>الدرس الأول: الدوال والجمع التلقائي — عرض تقديمي</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- AlpineJS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        /* Make text larger for projector use */
+        html,
+        body {
+            height: 100%;
+            font-size: 20px;
+            font-family: "Cairo", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "slnt" 0;
+            line-height: 1.8;
+        }
+
+        @media (min-width: 1200px) {
+            html, body { font-size: 22px; }
+        }
+
+        /* Scroll snap layout */
+        .snap-container {
+            scroll-snap-type: y mandatory;
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+
+        .snap-slide {
+            scroll-snap-align: start;
+            min-height: 100vh;
+        }
+
+        .snap-slide p,
+        .snap-slide li {
+            line-height: 2;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Gradient helpers */
+        .grad-1 { background: linear-gradient(135deg, #a7f3d0, #a5f3fc); }
+        .grad-2 { background: linear-gradient(135deg, #c4b5fd, #fbcfe8); }
+        .grad-3 { background: linear-gradient(135deg, #fde68a, #fca5a5); }
+        .grad-4 { background: linear-gradient(135deg, #99f6e4, #bfdbfe); }
+        .grad-5 { background: linear-gradient(135deg, #d8b4fe, #a5f3fc); }
+        .grad-6 { background: linear-gradient(135deg, #fda4af, #a7f3d0); }
+        .grad-7 { background: linear-gradient(135deg, #bae6fd, #d9f99d); }
+    </style>
+</head>
+
+<body class="bg-white text-slate-900 selection:bg-amber-300 selection:text-slate-900" x-data="{ slide: 1 }">
+    <!-- Top nav helpers -->
+    <div class="fixed top-4 left-4 right-4 z-50 flex items-center gap-2 justify-between pointer-events-none">
+        <div class="flex gap-2 pointer-events-auto">
+            <a href="#welcome" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">بداية</a>
+            <a href="#definition" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">تعريف الدوال</a>
+            <a href="#autosum" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">الجمع التلقائي</a>
+            <a href="#functions" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">دوال أساسية</a>
+            <a href="#activity" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">نشاط تطبيقي</a>
+            <a href="#summary" class="px-3 py-1 rounded-full bg-black/5 hover:bg-black/10 text-sm">الخلاصة</a>
+        </div>
+        <div class="hidden md:flex items-center gap-2 pointer-events-auto">
+            <i class="fa-solid fa-calculator text-amber-300"></i>
+            <span class="text-xs md:text-sm opacity-80">الدرس الثاني: الدوال والجمع التلقائي</span>
+        </div>
+    </div>
+
+    <main class="snap-container">
+        <!-- Welcome -->
+        <section id="welcome" class="snap-slide grad-2 flex items-center justify-center p-6">
+            <div class="max-w-5xl text-center animate__animated animate__fadeIn">
+                <h1 class="text-5xl md:text-7xl font-extrabold drop-shadow-xl leading-tight">
+                    الدوال والجمع التلقائي
+                </h1>
+                <p class="mt-6 text-2xl md:text-3xl opacity-95">
+                    السنة الثالثة متوسط — الدرس الثاني
+                </p>
+                <div class="mt-10 flex items-center justify-center gap-6 text-4xl">
+                    <i class="fa-solid fa-calculator"></i>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <i class="fa-solid fa-plus-minus"></i>
+                </div>
+                <p class="mt-8 text-lg bg-slate-100 rounded-2xl inline-block px-6 py-3 shadow-lg">
+                    سنتعرف على مفهوم الدوال، كيفية استخدام الجمع التلقائي، وبقية الدوال الأساسية في Excel.
+                </p>
+            </div>
+        </section>
+
+        <!-- Definition of Functions -->
+        <section id="definition" class="snap-slide grad-7 flex items-center justify-center p-8">
+            <div class="max-w-5xl animate__animated animate__fadeInUp">
+                <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
+                    ما هي الدوال (Functions)؟ <i class="fa-solid fa-circle-question text-yellow-300 drop-shadow-lg"></i>
+                </h2>
+                <div class="text-2xl md:text-3xl leading-relaxed space-y-6 text-center bg-slate-100 rounded-2xl p-8 shadow-lg">
+                    <p>
+                        الدالة هي <span class="font-bold text-red-600">صيغة معرفة مسبقاً</span> في برنامج Excel تقوم بإجراء عمليات حسابية محددة لتوفير الوقت والجهد.
+                    </p>
+                    <p class="font-mono text-xl bg-slate-200 p-3 rounded-md mt-2">=(ARG1; ARG2; ...)اسم_الدالة</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AutoSum Function -->
+        <section id="autosum" class="snap-slide grad-4 flex items-center justify-center p-8">
+            <div class="max-w-6xl w-full animate__animated animate__fadeInUp">
+                <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
+                    دالة الجمع التلقائي (∑) <i class="fa-solid fa-wand-magic-sparkles text-sky-200 drop-shadow-lg"></i>
+                </h2>
+                <div class="bg-slate-100 rounded-3xl p-8 shadow-lg text-2xl md:text-3xl">
+                    <h3 class="font-bold mb-4">خطوات استخدام الجمع التلقائي:</h3>
+                    <ol class="list-decimal pr-8 space-y-4">
+                        <li><span class="font-bold text-red-600">حدد الخلية</span> التي تريد أن يظهر فيها المجموع.</li>
+                        <li>اذهب إلى تبويب "<span class="font-bold text-red-600">Accueil</span>" (الشريط الرئيسي).</li>
+                        <li>انقر على زر <span class="font-bold text-red-600">الجمع التلقائي</span> (رمزه <span class="font-bold text-lg">∑</span>).</li>
+                        <li>سيقوم Excel تلقائياً بتحديد نطاق الخلايا.</li>
+                        <li>اضغط على مفتاح <span class="font-bold text-red-600">Enter</span> لتأكيد العملية.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Basic Functions -->
+        <section id="functions" class="snap-slide grad-5 flex items-center justify-center p-8">
+            <div class="max-w-6xl w-full animate__animated animate__fadeInUp">
+                <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
+                    دوال أساسية أخرى <i class="fa-solid fa-layer-group text-cyan-200 drop-shadow-lg"></i>
+                </h2>
+                <p class="text-center text-2xl mb-6">يمكن الوصول إليها من السهم بجانب زر الجمع التلقائي (∑).</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-2xl md:text-3xl">
+                    <div class="bg-slate-100 rounded-3xl p-6 shadow-lg text-center">
+                        <i class="fa-solid fa-chart-line text-3xl mb-3 text-amber-500"></i>
+                        <h3 class="font-extrabold text-3xl mb-2">المتوسط (Moyenne)</h3>
+                        <p class="opacity-95 text-2xl">لحساب المعدل الحسابي.</p>
+                    </div>
+                    <div class="bg-slate-100 rounded-3xl p-6 shadow-lg text-center">
+                        <i class="fa-solid fa-arrow-up-9-1 text-3xl mb-3 text-sky-600"></i>
+                        <h3 class="font-extrabold text-3xl mb-2">الحد الأقصى (Max)</h3>
+                        <p class="opacity-95 text-2xl">لإيجاد أكبر قيمة.</p>
+                    </div>
+                    <div class="bg-slate-100 rounded-3xl p-6 shadow-lg text-center">
+                        <i class="fa-solid fa-arrow-down-1-9 text-3xl mb-3 text-red-600"></i>
+                        <h3 class="font-extrabold text-3xl mb-2">الحد الأدنى (Min)</h3>
+                        <p class="opacity-95 text-2xl">لإيجاد أصغر قيمة.</p>
+                    </div>
+                    <div class="bg-slate-100 rounded-3xl p-6 shadow-lg text-center">
+                        <i class="fa-solid fa-list-ol text-3xl mb-3 text-emerald-600"></i>
+                        <h3 class="font-extrabold text-3xl mb-2">أرقام الحساب (Nb)</h3>
+                        <p class="opacity-95 text-2xl">لحساب عدد الخلايا الرقمية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activity -->
+        <section id="activity" class="snap-slide grad-3 flex items-center justify-center p-8">
+            <div class="max-w-6xl animate__animated animate__fadeInUp text-center">
+                <h2 class="text-4xl md:text-6xl font-bold mb-8">
+                    نشاط تطبيقي <i class="fa-solid fa-list-check text-yellow-300 drop-shadow-lg"></i>
+                </h2>
+                <p class="text-2xl md:text-3xl leading-relaxed bg-slate-100 rounded-2xl p-6 shadow-lg">
+                    أنشئ جدولاً لـ 5 تلاميذ وعلاماتهم في 3 مواد، ثم احسب لكل تلميذ:
+                </p>
+                <div class="mt-6 grid md:grid-cols-4 gap-4 text-2xl">
+                    <div class="bg-slate-100 rounded-2xl p-4 shadow-lg">مجموع النقاط</div>
+                    <div class="bg-slate-100 rounded-2xl p-4 shadow-lg">معدل النقاط</div>
+                    <div class="bg-slate-100 rounded-2xl p-4 shadow-lg">أعلى علامة</div>
+                    <div class="bg-slate-100 rounded-2xl p-4 shadow-lg">أدنى علامة</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary -->
+        <section id="summary" class="snap-slide grad-1 flex items-center justify-center p-8">
+            <div class="max-w-5xl text-center animate__animated animate__fadeInUp">
+                <h2 class="text-4xl md:text-6xl font-bold mb-8">
+                    الخلاصة <i class="fa-solid fa-star text-yellow-300 drop-shadow-lg"></i>
+                </h2>
+                <p class="text-2xl md:text-3xl leading-relaxed bg-slate-100 rounded-2xl p-6 shadow-lg">
+                    الدوال في Excel هي أدوات قوية تجعل العمليات الحسابية سريعة ودقيقة، مما يساعدنا على تحليل البيانات بكفاءة عالية وتجنب الأخطاء اليدوية.
+                </p>
+                <div class="mt-8">
+                    <a href="#welcome" class="px-6 py-3 rounded-full bg-slate-100 hover:bg-slate-200 text-lg shadow-lg">العودة
+                        للبداية <i class="fa-solid fa-arrow-up-long"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer watermark -->
+    <footer class="fixed bottom-3 left-0 right-0 z-40 flex justify-center pointer-events-none">
+        <div class="pointer-events-auto text-xs md:text-sm px-3 py-1 rounded-full bg-black/10 backdrop-blur text-slate-600">
+            إعداد: الأستاذ سوسي حمزة — السنة الثالثة متوسط
+        </div>
+    </footer>
+</body>
+
+</html>
+

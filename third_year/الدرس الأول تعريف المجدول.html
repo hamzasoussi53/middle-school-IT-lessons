@@ -23,8 +23,12 @@
         html,
         body {
             height: 100%;
-            font-size: 20px;
+            font-size: 20px; 
             font-family: "Cairo", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "slnt" 0;
             /* More line spacing for projector readability */
             line-height: 1.8;
         }
@@ -58,8 +62,8 @@
         /* Ensure paragraphs and lists have comfortable spacing */
         .snap-slide p,
         .snap-slide li {
-            line-height: 1.8;
-            margin-bottom: 0.6rem;
+            line-height: 2;
+            margin-bottom: 0.8rem;
         }
 
         /* Gradient helper */
@@ -93,7 +97,7 @@
     </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 selection:bg-amber-300 selection:text-slate-900" x-data="{ slide: 1 }">
+<body class="bg-white text-slate-900 selection:bg-amber-300 selection:text-slate-900" x-data="{ slide: 1 }">
     <!-- Top nav helpers -->
     <div class="fixed top-4 left-4 right-4 z-50 flex items-center gap-2 justify-between pointer-events-none">
         <div class="flex gap-2 pointer-events-auto">
@@ -127,7 +131,7 @@
                     <i class="fa-solid fa-chart-column"></i>
                     <i class="fa-solid fa-calculator"></i>
                 </div>
-                <p class="mt-8 text-lg bg-black/5 rounded-2xl inline-block px-6 py-3">
+                <p class="mt-8 text-lg bg-slate-100 rounded-2xl inline-block px-6 py-3 shadow-lg">
                     سنتعرف على مفهوم المجدول، مكوّناته، وكيفية فتح ملف والعمل عليه مع نشاط عملي.
                 </p>
             </div>
@@ -137,7 +141,7 @@
         <section id="motivation" class="snap-slide grad-7 flex items-center justify-center p-8">
             <div class="max-w-5xl animate__animated animate__fadeInUp">
                 <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
-                    سؤال تحفيزي <i class="fa-solid fa-question text-yellow-300"></i>
+                    سؤال تحفيزي <i class="fa-solid fa-question text-yellow-300 drop-shadow-lg"></i>
                 </h2>
                 <div class="text-2xl md:text-3xl leading-relaxed space-y-6 text-center p-6 rounded-2xl">
                     <p>لماذا يكاد لا يوجد أي خطأ حسابي في كشف النقاط المدرسي؟</p>
@@ -150,9 +154,9 @@
         <section id="definition" class="snap-slide grad-1 flex items-center justify-center p-8">
             <div class="max-w-5xl animate__animated animate__fadeInUp">
                 <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
-                    تعريف المجدول Excel <i class="fa-solid fa-book-open text-lime-300"></i>
+                    تعريف المجدول Excel <i class="fa-solid fa-book-open text-lime-300 drop-shadow-lg"></i>
                 </h2>
-                <p class="text-2xl md:text-3xl leading-relaxed text-center bg-black/5 rounded-2xl p-6">
+                <p class="text-2xl md:text-3xl leading-relaxed text-center bg-slate-100 rounded-2xl p-6 shadow-lg">
                     المجدول هو برنامج يُستخدم لإدخال البيانات النصية والعددية في جداول إلكترونية، ويسمح بإجراء
                     العمليات الحسابية عليها وتنسيقها وعرضها باستخدام الرسومات البيانية. أشهر مثال: Microsoft Excel.
                 </p>
@@ -163,17 +167,17 @@
         <section id="steps" class="snap-slide grad-4 flex items-center justify-center p-8">
             <div class="max-w-6xl w-full animate__animated animate__fadeInUp">
                 <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
-                    خطوات تشغيل المجدول Excel <i class="fa-solid fa-play text-sky-200"></i>
+                    خطوات تشغيل المجدول Excel <i class="fa-solid fa-play text-sky-200 drop-shadow-lg"></i>
                 </h2>
                 <div class="grid md:grid-cols-2 gap-8 text-2xl md:text-3xl leading-relaxed">
-                    <div class="bg-black/5 rounded-3xl p-6 shadow-xl">
+                    <div class="bg-slate-100 rounded-3xl p-6 shadow-lg">
                         <ul class="list-disc pr-6 space-y-3">
                             <li>انقر بزر الفأرة الأيمن في مكان فارغ على سطح المكتب.</li>
                             <li>اختر تعليمة "جديد".</li>
                             <li>اختر من القائمة الفرعية "ورقة عمل Excel".</li>
                         </ul>
                     </div>
-                    <div class="bg-black/5 rounded-3xl p-6 shadow-xl">
+                    <div class="bg-slate-100 rounded-3xl p-6 shadow-lg">
                         <p class="text-2xl">يمكنك أيضًا فتح Excel من قائمة ابدأ أو من شريط المهام إذا كان مثبتًا.</p>
                     </div>
                 </div>
@@ -184,17 +188,17 @@
         <section id="interface" class="snap-slide grad-6 flex items-center justify-center p-8">
             <div class="max-w-6xl animate__animated animate__fadeInUp">
                 <h2 class="text-4xl md:text-6xl font-bold text-center mb-10">
-                    مكوّنات نافذة Excel الأساسية <i class="fa-solid fa-window-maximize text-emerald-200"></i>
+                    مكوّنات نافذة Excel الأساسية <i class="fa-solid fa-window-maximize text-emerald-200 drop-shadow-lg"></i>
                 </h2>
                 <div class="grid md:grid-cols-2 gap-8 text-2xl md:text-3xl leading-relaxed">
-                    <div class="bg-black/5 rounded-3xl p-6 shadow-xl">
+                    <div class="bg-slate-100 rounded-3xl p-6 shadow-lg">
                         <ul class="list-disc pr-6 space-y-3">
                             <li>شريط العنوان: يظهر اسم البرنامج والمستند.</li>
                             <li>شريط التبويبات: قوائم مثل ملف، إدراج، تخطيط الصفحة.</li>
                             <li>شريط الأدوات: أزرار التحكم الرئيسية.</li>
                         </ul>
                     </div>
-                    <div class="bg-black/5 rounded-3xl p-6 shadow-xl">
+                    <div class="bg-slate-100 rounded-3xl p-6 shadow-lg">
                         <ul class="list-disc pr-6 space-y-3">
                             <li>ورقة العمل: المساحة لإدخال البيانات.</li>
                             <li>علامات تبويب أوراق العمل: للتنقل بين الأوراق.</li>
@@ -209,16 +213,16 @@
         <section id="activity" class="snap-slide grad-3 flex items-center justify-center p-8">
             <div class="max-w-6xl animate__animated animate__fadeInUp text-center">
                 <h2 class="text-4xl md:text-6xl font-bold mb-8">
-                    نشاط تطبيقي <i class="fa-solid fa-list-check text-yellow-300"></i>
+                    نشاط تطبيقي <i class="fa-solid fa-list-check text-yellow-300 drop-shadow-lg"></i>
                 </h2>
-                <p class="text-2xl md:text-3xl leading-relaxed bg-black/5 rounded-2xl p-6">
+                <p class="text-2xl md:text-3xl leading-relaxed bg-slate-100 rounded-2xl p-6 shadow-lg">
                     افتح برنامج Microsoft Excel وقم بتنفيذ ما يلي:
                 </p>
                 <div class="mt-6 grid md:grid-cols-2 gap-4 text-2xl">
-                    <div class="bg-black/5 rounded-2xl p-4">أنشئ ملف جديد وسمه "التطبيق الثاني".</div>
-                    <div class="bg-black/5 rounded-2xl p-4">أعد تسمية أوراق العمل إلى: ورقة1، ورقة2، ورقة3.</div>
-                    <div class="bg-black/5 rounded-2xl p-4">أضف ورقة عمل جديدة وسمها ورقة4.</div>
-                    <div class="bg-black/5 rounded-2xl p-4">غيّر اتجاه ورقة العمل من اليمين إلى اليسار.</div>
+                    <div class="bg-slate-100 rounded-2xl p-4 shadow-lg">أنشئ ملف جديد وسمه "التطبيق الثاني".</div>
+                    <div class="bg-slate-100 rounded-2xl p-4 shadow-lg">أعد تسمية أوراق العمل إلى: ورقة1، ورقة2، ورقة3.</div>
+                    <div class="bg-slate-100 rounded-2xl p-4 shadow-lg">أضف ورقة عمل جديدة وسمها ورقة4.</div>
+                    <div class="bg-slate-100 rounded-2xl p-4 shadow-lg">غيّر اتجاه ورقة العمل من اليمين إلى اليسار.</div>
                 </div>
             </div>
         </section>
@@ -227,14 +231,14 @@
         <section id="summary" class="snap-slide grad-5 flex items-center justify-center p-8">
             <div class="max-w-5xl text-center animate__animated animate__fadeInUp">
                 <h2 class="text-4xl md:text-6xl font-bold mb-8">
-                    الخلاصة <i class="fa-solid fa-star text-yellow-300"></i>
+                    الخلاصة <i class="fa-solid fa-star text-yellow-300 drop-shadow-lg"></i>
                 </h2>
-                <p class="text-2xl md:text-3xl leading-relaxed bg-black/5 rounded-2xl p-6">
+                <p class="text-2xl md:text-3xl leading-relaxed bg-slate-100 rounded-2xl p-6 shadow-lg">
                     المجدول أداة فعالة لمعالجة البيانات الحسابية وتنسيقها وعرضها بشكل منظم. برنامج Excel يساعد على
                     تسهيل العمليات الحسابية وتجنب الأخطاء.
                 </p>
                 <div class="mt-8">
-                    <a href="#welcome" class="px-6 py-3 rounded-full bg-black/5 hover:bg-black/10 text-lg">العودة
+                    <a href="#welcome" class="px-6 py-3 rounded-full bg-slate-100 hover:bg-slate-200 text-lg shadow-lg">العودة
                         للبداية <i class="fa-solid fa-arrow-up-long"></i></a>
                 </div>
             </div>
